@@ -2,17 +2,18 @@ import clsx from 'clsx';
 import { Colors } from 'config/colors';
 import { contact, ContactType } from 'config/contact';
 import React, { memo } from 'react';
-import { IconBaseProps } from 'react-icons';
-import { FaLinkedinIn as LinkedinIcon } from 'react-icons/fa';
-import {
-  IoLogoGithub as GithubIcon,
-  IoLogoTwitter as TwitterIcon,
-} from 'react-icons/io';
-import {
-  SiSkype as SkypeIcon,
-  SiGmail as MailIcon,
-} from 'react-icons/si';
+import { IconBaseProps, IconType } from 'react-icons';
+import { FaLinkedinIn } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+import { IoLogoGithub } from 'react-icons/io';
+import { SiGmail } from 'react-icons/si';
 import { Maybe, Tuple } from 'types';
+
+const asIcon = (Icon: IconType) => Icon as React.ComponentType<IconBaseProps>;
+const LinkedinIcon = asIcon(FaLinkedinIn);
+const TwitterIcon = asIcon(FaXTwitter);
+const GithubIcon = asIcon(IoLogoGithub);
+const MailIcon = asIcon(SiGmail);
 
 interface SocialIconsProps {
   className?: string;
@@ -53,10 +54,6 @@ function resolveIcon(entry: Tuple<string>): React.ReactNode {
 
     case ContactType.email:
       icon = <MailIcon {...props} />;
-      break;
-
-    case ContactType.skype:
-      icon = <SkypeIcon {...props} />;
       break;
     default:
       break;

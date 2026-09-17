@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "start": "cross-env SOCKET=true node ./scripts/next-remote-watch.js ./data",
@@ -33,7 +33,7 @@
     "react": "17.0.2",
     "react-calendly": "^2.2.3",
     "react-dom": "17.0.2",
-    "react-icons": "^4.3.1",
+    "react-icons": "^5.3.0",
     "react-indiana-drag-scroll": "^2.1.0",
     "react-responsive-carousel": "3.2.23",
     "react-rough-notation": "^1.0.2",
