@@ -32,9 +32,10 @@ class MyDocument extends Document {
                 <Head>
                     <link
                         rel='apple-touch-icon'
-                        sizes='76x76'
+                        sizes='180x180'
                         href='/static/favicons/apple-touch-icon.png'
                     />
+                    <link rel='icon' href='/static/favicons/favicon.ico' sizes='any' />
                     <link
                         rel='icon'
                         type='image/png'
@@ -48,9 +49,9 @@ class MyDocument extends Document {
                         href='/static/favicons/favicon-16x16.png'
                     />
                     <link rel='manifest' href='/static/favicons/manifest.json'/>
-                    <meta name="msapplication-TileColor" content="#000000"/>
+                    <meta name="msapplication-TileColor" content="#0B0F14"/>
                     <meta name="msapplication-TileImage" content="/static/favicons/ms-icon-144x144.png"/>
-                    <meta name="theme-color" content="#000000"/>
+                    <meta name="theme-color" content="#0B0F14"/>
                     <link rel='alternate' type='application/rss+xml' href='/feed.xml'/>
                 </Head>
                 <body className='bg-white text-black antialiased dark:bg-gray-900 dark:text-white'>
